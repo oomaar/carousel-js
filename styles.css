@@ -29,7 +29,7 @@
     transform: translateY(-50%);
 }
 
-.carousel .carousel__actions button {
+button {
     border-radius: 50px;
     border: none;
     outline: none;
@@ -39,11 +39,11 @@
     cursor: pointer;
 }
 
-.carousel .carousel__actions button#prevBtn {
+#prevBtn {
     margin-left: 20px;
 }
 
-.carousel .carousel__actions button#nextBtn {
+#nextBtn {
     margin-right: 20px;
 }
 

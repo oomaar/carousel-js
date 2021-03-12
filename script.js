@@ -10,29 +10,20 @@ document.getElementById('prevBtn').addEventListener("click", function() {
     moveToPrevSlide();
 });
 
-function updateSlidePosition() {
+const updateSlidePosition = () => {
     for (let slide of slides) {
         slide.classList.remove('active');
         slide.classList.add('hidden');
     }
-
     slides[slidePosition].classList.add('active');
 }
 
-function moveToPrevSlide() {
+const moveToPrevSlide = () => {
     updateSlidePosition();
-    if (slidePosition === 0) {
-        slidePosition = totalSlides - 1;
-    } else {
-        slidePosition--;
-    }
+    slidePosition === 0 ? slidePosition = totalSlides - 1 : slidePosition--;
 }
 
 function moveToNextSlide() {
     updateSlidePosition();
-    if (slidePosition === totalSlides - 1) {
-        slidePosition = 0;
-    } else {
-        slidePosition++;
-    }
+    slidePosition === totalSlides - 1 ? slidePosition = 0 : slidePosition++;
 }
